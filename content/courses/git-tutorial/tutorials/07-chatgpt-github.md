@@ -10,6 +10,8 @@ title: 07 用网页版 ChatGPT 修改 GitHub Repo
 
 这并不意味着 ChatGPT 取代 Git。相反，ChatGPT 做的事情仍然应该遵循你熟悉的 Git workflow：
 
+![ChatGPT + GitHub workflow](../../../chatgpt-github-workflow.svg)
+
 ```text
 你的需求
    │
