@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">ChatGPT and GitHub workflow</title>
+  <desc id="desc">A five-step workflow from request to ChatGPT, branch, commit, pull request, review and merge.</desc>
+  <rect width="1200" height="420" rx="28" fill="#faf7f2"/>
+  <text x="70" y="72" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#222">ChatGPT + GitHub Workflow</text>
+  <text x="70" y="108" font-family="Arial, sans-serif" font-size="17" fill="#666">Use AI to help with the work, while Git keeps the changes reviewable.</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(70,165)">
+      <rect width="190" height="145" rx="20" fill="#fff" stroke="#ddd"/>
+      <circle cx="38" cy="38" r="20" fill="#f3b27a"/><text x="32" y="45" font-size="18" font-weight="700" fill="#fff">1</text>
+      <text x="28" y="82" font-size="20" font-weight="700" fill="#222">Request</text>
+      <text x="28" y="110" font-size="15" fill="#666">Tell ChatGPT what</text><text x="28" y="132" font-size="15" fill="#666">you want to change.</text>
+    </g>
+    <text x="275" y="242" font-size="30" fill="#aaa">→</text>
+    <g transform="translate(310,165)">
+      <rect width="190" height="145" rx="20" fill="#fff" stroke="#ddd"/>
+      <circle cx="38" cy="38" r="20" fill="#f3b27a"/><text x="32" y="45" font-size="18" font-weight="700" fill="#fff">2</text>
+      <text x="28" y="82" font-size="20" font-weight="700" fill="#222">Branch</text>
+      <text x="28" y="110" font-size="15" fill="#666">Create a separate</text><text x="28" y="132" font-size="15" fill="#666">working branch.</text>
+    </g>
+    <text x="515" y="242" font-size="30" fill="#aaa">→</text>
+    <g transform="translate(550,165)">
+      <rect width="190" height="145" rx="20" fill="#fff" stroke="#ddd"/>
+      <circle cx="38" cy="38" r="20" fill="#f3b27a"/><text x="32" y="45" font-size="18" font-weight="700" fill="#fff">3</text>
+      <text x="28" y="82" font-size="20" font-weight="700" fill="#222">Commit</text>
+      <text x="28" y="110" font-size="15" fill="#666">Save a clear,</text><text x="28" y="132" font-size="15" fill="#666">focused change.</text>
+    </g>
+    <text x="755" y="242" font-size="30" fill="#aaa">→</text>
+    <g transform="translate(790,165)">
+      <rect width="190" height="145" rx="20" fill="#fff" stroke="#ddd"/>
+      <circle cx="38" cy="38" r="20" fill="#f3b27a"/><text x="32" y="45" font-size="18" font-weight="700" fill="#fff">4</text>
+      <text x="28" y="82" font-size="20" font-weight="700" fill="#222">Pull Request</text>
+      <text x="28" y="110" font-size="15" fill="#666">Explain the change</text><text x="28" y="132" font-size="15" fill="#666">and ask for review.</text>
+    </g>
+    <text x="995" y="242" font-size="30" fill="#aaa">→</text>
+    <g transform="translate(1030,165)">
+      <rect width="110" height="145" rx="20" fill="#fff" stroke="#ddd"/>
+      <circle cx="38" cy="38" r="20" fill="#f3b27a"/><text x="32" y="45" font-size="18" font-weight="700" fill="#fff">5</text>
+      <text x="22" y="82" font-size="20" font-weight="700" fill="#222">Review</text>
+      <text x="22" y="110" font-size="15" fill="#666">then</text><text x="22" y="132" font-size="15" fill="#666">merge.</text>
+    </g>
+  </g>
+</svg>
