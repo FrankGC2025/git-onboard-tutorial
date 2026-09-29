@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650">
+<rect width="1200" height="650" fill="#fafafa"/>
+<text x="60" y="58" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#222">Connecting ChatGPT to GitHub</text>
+<text x="60" y="92" font-family="Arial,sans-serif" font-size="17" fill="#666">The two screens you should expect during the first connection.</text>
+
+<g transform="translate(50,125)">
+<rect width="535" height="445" rx="18" fill="#fff" stroke="#ddd"/>
+<text x="28" y="42" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#222">① GitHub authorization</text>
+<rect x="28" y="68" width="479" height="345" rx="12" fill="#fff" stroke="#eee"/>
+<circle cx="67" cy="110" r="25" fill="#111"/>
+<path d="M55 111c0-10 7-18 18-18s18 8 18 18c0 8-5 14-12 17v9h-12v-9c-7-3-12-9-12-17z" fill="#fff"/>
+<text x="105" y="111" font-family="Arial,sans-serif" font-size="23" fill="#777">GitHub</text>
+<text x="105" y="141" font-family="Arial,sans-serif" font-size="16" fill="#777">your GitHub account · Primary</text>
+<text x="55" y="188" font-family="Arial,sans-serif" font-size="22" fill="#222">Allow ChatGPT to use GitHub?</text>
+<text x="55" y="224" font-family="Arial,sans-serif" font-size="14" fill="#666">GitHub may ask you to authorize an action requested</text>
+<text x="55" y="246" font-family="Arial,sans-serif" font-size="14" fill="#666">by ChatGPT, such as creating or updating a file.</text>
+<rect x="55" y="288" width="128" height="48" rx="24" fill="#fff" stroke="#ccc"/>
+<text x="82" y="318" font-family="Arial,sans-serif" font-size="16" fill="#222">Always allow</text>
+<rect x="196" y="288" width="90" height="48" rx="24" fill="#fff" stroke="#ccc"/>
+<text x="224" y="318" font-family="Arial,sans-serif" font-size="16" fill="#222">Deny</text>
+<rect x="300" y="288" width="160" height="48" rx="24" fill="#111"/>
+<text x="329" y="318" font-family="Arial,sans-serif" font-size="16" fill="#fff">Allow once</text>
+</g>
+
+<g transform="translate(615,125)">
+<rect width="535" height="445" rx="18" fill="#fff" stroke="#ddd"/>
+<text x="28" y="42" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#222">② GitHub connector installed</text>
+<rect x="28" y="68" width="479" height="160" rx="12" fill="#fff" stroke="#eee"/>
+<circle cx="75" cy="128" r="30" fill="#111"/>
+<path d="M63 129c0-12 8-21 21-21s21 9 21 21c0 9-6 16-14 19v11H77v-11c-8-3-14-10-14-19z" fill="#fff"/>
+<text x="120" y="120" font-family="Arial,sans-serif" font-size="25" fill="#222">GitHub</text>
+<text x="120" y="149" font-family="Arial,sans-serif" font-size="16" fill="#888">Triage PRs, issues, CI, and publish flows</text>
+<text x="418" y="128" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#777">Installed</text>
+<rect x="28" y="258" width="479" height="135" rx="12" fill="#faf7f2"/>
+<text x="52" y="294" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#222">What this means</text>
+<text x="52" y="324" font-family="Arial,sans-serif" font-size="14" fill="#555">ChatGPT can now work with the repositories</text>
+<text x="52" y="346" font-family="Arial,sans-serif" font-size="14" fill="#555">that your GitHub connection permits.</text>
+<text x="52" y="380" font-family="Arial,sans-serif" font-size="14" fill="#555">You can still review every proposed change</text>
+<text x="52" y="402" font-family="Arial,sans-serif" font-size="14" fill="#555">through branches and Pull Requests.</text>
+</g>
+</svg>
