@@ -20,6 +20,7 @@
 - Pull Before You Work 的基本协作习惯
 - Merge Conflict 的基本处理思路
 - GitHub Pages 静态网站部署
+- **使用网页版 ChatGPT 阅读、修改 GitHub Repo，并通过 Pull Request 提交 AI-assisted changes**
 - 常见 Git / GitHub 问题与排查方法
 
 重点不是记住很多命令，而是建立一套清晰的工作流程：
@@ -54,7 +55,8 @@ GitHub Repository
 6. Push branch 到 GitHub
 7. 创建 Pull Request
 8. 练习一次 Merge Conflict
-9. 再进入真正的团队项目
+9. 学习如何让网页版 ChatGPT 协助阅读和修改 Repo
+10. 再进入真正的团队项目
 
 这样你学到的是一套可以直接迁移到其他 GitHub 项目的工作流。
 
@@ -105,8 +107,8 @@ git-onboard-tutorial/
 │   └── build.js          # Markdown → HTML、搜索索引等构建逻辑
 ├── src/
 │   └── assets/           # CSS / JavaScript 等网站资源
-├── package.json           # Node.js 项目配置与依赖
-└── README.md              # 项目说明
+├── package.json          # Node.js 项目配置与依赖
+└── README.md             # 项目说明
 ```
 
 构建完成后，网站会生成到：
@@ -183,6 +185,57 @@ git push -u origin feature/your-change
 - **Commit message 要说明“改了什么”。**
 - **Push branch，然后通过 Pull Request 合并。**
 - 如果看到 `CONFLICT`、`rejected`、`fatal:` 等错误，先运行 `git status`，不要盲目复制网上的命令。
+
+## 用网页版 ChatGPT 协作
+
+如果你已经理解基本 Git workflow，还可以让网页版 ChatGPT 协助你阅读和修改 GitHub repository。
+
+推荐把它理解成：
+
+```text
+你的需求
+   │
+   ▼
+ChatGPT 读取 Repository
+   │
+   ▼
+分析 / 修改文件
+   │
+   ▼
+创建 Branch
+   │
+   ▼
+Commit
+   │
+   ▼
+Pull Request
+   │
+   ▼
+你 Review
+   │
+   ▼
+Merge → main
+```
+
+完整教程：
+
+> **[07 用网页版 ChatGPT 修改 GitHub Repo](https://frankgc2025.github.io/git-onboard-tutorial/tutorials/07-chatgpt-github.html)**
+
+连接 GitHub 时，ChatGPT / GitHub 可能会显示授权确认和 GitHub connector 已安装等界面。项目中的教程配有一张根据实际界面整理的示意图；具体 UI 和权限选项可能随产品版本变化。
+
+最重要的原则仍然是：
+
+> **先让 AI 阅读，再让 AI 修改；让修改进入 branch 和 Pull Request，而不是直接覆盖 `main`。**
+
+### AI-assisted changes
+
+如果使用 AI 帮助完成修改，建议在 Pull Request 描述中透明标注，例如：
+
+```text
+AI-assisted by ChatGPT.
+```
+
+这里的“ChatGPT”表示 AI 辅助来源；GitHub 上的实际 commit / PR 身份仍然是执行操作并授权 GitHub 的账号。不要为了署名而伪造一个不存在的 ChatGPT GitHub 账号。
 
 ## 为什么这个项目存在
 
