@@ -119,4 +119,43 @@
   } else {
     restoreDesktopState();
   }
+
+  // Copy buttons for code blocks
+  function initCopyButtons() {
+    const pres = document.querySelectorAll('.content pre.hljs');
+    if (!pres.length) return;
+
+    async function copyCode(button) {
+      const pre = button.closest('pre.hljs');
+      const code = pre.querySelector('code');
+      const text = code ? code.textContent : pre.textContent;
+
+      try {
+        await navigator.clipboard.writeText(text);
+        button.classList.add('copied');
+        const original = button.getAttribute('aria-label');
+        button.setAttribute('aria-label', 'Copied');
+        button.textContent = 'Copied';
+        setTimeout(() => {
+          button.classList.remove('copied');
+          button.setAttribute('aria-label', original);
+          button.textContent = 'Copy';
+        }, 1500);
+      } catch (err) {
+        console.error('Copy failed', err);
+      }
+    }
+
+    pres.forEach(pre => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'copy-code-btn';
+      btn.setAttribute('aria-label', 'Copy code');
+      btn.textContent = 'Copy';
+      btn.addEventListener('click', () => copyCode(btn));
+      pre.appendChild(btn);
+    });
+  }
+
+  initCopyButtons();
 })();

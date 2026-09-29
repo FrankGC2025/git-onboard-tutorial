@@ -611,13 +611,11 @@ function buildWithHomepage() {
     const courseSlug = isCourse ? relParts[1] : null;
     const section = isCourse && relParts.length >= 3 ? relParts[2] : null;
 
-    let processedContent = content;
-    if (courseSlug === 'options-volatility-hedge-funds') {
-      processedContent = processedContent.replace(
-        /!\[([^\]]*)\]\(figures_Ch1-2\/([^)]+)\)/g,
-        `![$1](${BASE_URL}/courses/options-volatility-hedge-funds/figures/$2)`
-      );
-    }
+    // Rewrite local figure references so they work both locally and on GitHub Pages.
+    let processedContent = content.replace(
+      /!\[([^\]]*)\]\(figures\/([^)]+)\)/g,
+      `![$1](${BASE_URL}/figures/$2)`
+    );
 
     const html = md.render(processedContent);
     const title = meta.title || extractTitle(html, path.basename(filePath, '.md'));
