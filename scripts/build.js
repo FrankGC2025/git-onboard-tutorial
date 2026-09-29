@@ -290,7 +290,7 @@ function renderPage(page, courses, prevNext) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${escapeHtml(pageTitle)}</title>
-  <link rel="icon" type="image/png" href="${BASE_URL}/icon.png">
+  <link rel="icon" type="image/png" href="${BASE_URL}/Git-Icon.png">
   <link rel="stylesheet" href="${BASE_URL}/assets/katex.min.css">
   <link rel="stylesheet" href="${BASE_URL}/assets/highlight-github.min.css">
   <link rel="stylesheet" href="${BASE_URL}/assets/style.css">
@@ -331,7 +331,7 @@ function renderTopNav() {
         </svg>
       </button>
       <a class="site-brand" href="${BASE_URL}/index.html">
-        <img src="${BASE_URL}/icon.png" alt="" class="site-icon" width="32" height="32">
+        <img src="${BASE_URL}/Git-Icon.png" alt="" class="site-icon" width="32" height="32">
         <span class="site-title">Git Onboard</span>
       </a>
       <nav class="top-links">
