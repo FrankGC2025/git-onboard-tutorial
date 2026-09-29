@@ -1,0 +1,22 @@
+{
+  "name": "git-onboard-tutorial",
+  "version": "1.0.0",
+  "description": "A step-by-step Git & GitHub onboarding tutorial site.",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "build:gh": "cross-env BASE_URL=/git-onboard-tutorial node scripts/build.js",
+    "serve": "npm run build && serve dist",
+    "serve:gh": "npm run build:gh && serve dist"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "highlight.js": "^11.10.0",
+    "js-yaml": "^4.1.0",
+    "katex": "^0.16.11",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0",
+    "markdown-it-texmath": "^1.0.0",
+    "minisearch": "^7.1.0",
+    "serve": "^14.2.3"
+  }
+}
