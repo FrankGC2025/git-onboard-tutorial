@@ -6,7 +6,7 @@ title: 07 用网页版 ChatGPT 修改 GitHub Repo
 
 如果你已经会基本的 Git workflow，那么还有一种非常方便的方式：
 
-> **让 ChatGPT 直接连接你的 GitHub repository，阅读代码、修改文件，并通过 branch + commit + Pull Request 提交修改。**
+> **让网页版 ChatGPT 连接你的 GitHub repository，阅读代码、修改文件，并通过 branch + commit + Pull Request 提交修改。**
 
 这并不意味着 ChatGPT 取代 Git。相反，ChatGPT 做的事情仍然应该遵循你熟悉的 Git workflow：
 
@@ -37,7 +37,7 @@ Pull Request
 Merge → main
 ```
 
-因此，这种方式特别适合：
+这种方式特别适合：
 
 - 不熟悉代码的团队成员
 - 想让 AI 帮忙修改 Markdown / HTML / CSS / JavaScript 的人
@@ -50,11 +50,17 @@ Merge → main
 
 在 ChatGPT 中打开 **Settings → Apps / Connectors**，找到 GitHub 并完成授权。
 
-授权时，你需要确认 ChatGPT 可以访问你希望它协作的 repository。
+授权过程中，你可能会看到类似下面的界面：
+
+![GitHub authorization screen](../../../chatgpt-github-connection.svg)
+
+这个示意图根据实际连接界面整理而成。具体按钮、权限描述和页面布局可能随 ChatGPT / GitHub 版本变化。
+
+完成连接后，GitHub connector 会显示为已安装或已连接。此时 ChatGPT 才可以按照你授予的权限访问相应 repository。
 
 > **重要：** 不要为了一个普通教程仓库就给任何工具不必要的权限。只连接你真正需要使用的 repository。
 
-连接完成后，你可以直接在 ChatGPT 对话中告诉它：
+连接完成后，可以直接在 ChatGPT 对话中告诉它：
 
 ```text
 Read my GitHub repository:
@@ -310,24 +316,37 @@ main
 
 ## 9. 关于 “ChatGPT 署名”
 
-使用 GitHub Connector 时，提交实际上是在**你授权的 GitHub 账号**下完成的。
-
-因此，不应该伪造一个不存在的 “ChatGPT GitHub 用户” 作为 commit author。
-
-更合适的做法是在 Pull Request 描述或项目贡献记录中明确说明：
+如果你希望团队成员知道某个 Pull Request 是由 ChatGPT 协助完成的，可以在 PR 描述中明确写：
 
 ```text
-AI-assisted: ChatGPT
+AI-assisted by ChatGPT.
 ```
 
-这样可以同时保留：
+例如：
 
-- GitHub 上真实的提交身份
-- 完整的 Git history
-- AI 辅助的透明说明
-- 人类对最终修改的 Review
+```text
+## Summary
 
-如果项目团队有自己的 AI attribution convention，也应该优先遵循团队约定。
+AI-assisted by ChatGPT.
+
+### Changes
+- ...
+- ...
+- ...
+
+### Review
+The changes should be reviewed by a human before merging.
+```
+
+需要注意的是：通过 GitHub connector 执行的操作仍然使用你授权的 GitHub 账号完成。因此，**不要伪造一个名为 “ChatGPT” 的 GitHub 用户作为 commit author**。
+
+更透明的做法是：
+
+- GitHub commit / PR 保留真实执行账号
+- PR description 标注 **AI-assisted by ChatGPT**
+- 人类负责最终 Review 和 Merge
+
+如果项目团队有自己的 AI attribution convention，优先遵循团队约定。
 
 ---
 
@@ -370,7 +389,5 @@ Review Pull Request
         ↓
 满意后 Merge
 ```
-
-这比“把整个项目丢给 AI，然后让它随便改”可靠得多。
 
 > **AI 可以帮你写代码，但 Git workflow 仍然应该由你掌握。**
